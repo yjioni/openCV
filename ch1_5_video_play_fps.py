@@ -4,7 +4,7 @@ from tkinter import filedialog
 
 root = Tk()
 root.avi_file = filedialog.askopenfilename(
-    initialdir='C:/Users/oing9/Documents/Crawling',
+    initialdir='C:/Users/',
     title='Select an avi file',
     filetypes=(('avi files', '*.avi'), ('all files', '*.*'))
     )

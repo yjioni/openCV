@@ -1,11 +1,19 @@
 import cv2
 import numpy as np
+from tkinter import *
+from tkinter import filedialog
 
+root = Tk()
+root.filename = filedialog.askopenfilename(
+    initialdir = 'C:',
+    title = 'img file',
+    filetypes = (('jpg files', '*.jpg'), ('all files', '*.*'))
+    )
 # 빈 화면 만들기 
 # img = np.full((500, 500, 3), 255, dtype=np.uint8)
 # cv2.imwtite('../blank_500.jpg', img)
 
-img = cv2.imread('C:/Users/oing9/Documents/Crawling/img/blank_500.jpg')
+img = cv2.imread(root.filename)
 
 cv2.line(img, (50, 50), (150, 50), (255, 0, 0))
 cv2.line(img, (50, 100), (150, 100), (0, 155, 0))
