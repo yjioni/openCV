@@ -1,17 +1,16 @@
 import cv2
 import numpy as np
 
-# from tkinter import *
-# from tkinter import filedialog
+from tkinter import *
+from tkinter import filedialog
 
-# root = Tk()
-# root.filename = filedialog.askopenfilename(
-#                     title= 'select an image for a background',
-#                     initialdir= 'C:/Users/',
-#                     filetypes= (('jpg files', '*.jpg'), ('all files', '*.*'))
-#                     )
-# img = cv2.imread(root.filename)
-img = cv2.imread('C:/Users/oing9/Documents/Crawling/img/blank_500.jpg')
+root = Tk()
+root.filename = filedialog.askopenfilename(
+                    title= 'select an image for a background',
+                    initialdir= 'C:/Users/',
+                    filetypes= (('jpg files', '*.jpg'), ('all files', '*.*'))
+                    )
+img = cv2.imread(root.filename)
 
 # 원
 cv2.circle(img, (150, 150), 100, (200, 0, 10))
