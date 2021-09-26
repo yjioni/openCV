@@ -1,9 +1,16 @@
 import cv2
 
-file_path = 'C:/Users/oing9/Documents/Crawling/img/girl.jpg'
+from tkinter import *
+from tkinter import filedialog
 
-img = cv2.imread(file_path)
-img_gray = cv2.imread(file_path, cv2.IMREAD_GRAYSCALE)
+root = Tk()
+root.filename = filedialog.askopenfilename(
+                    title= 'select an image for a background',
+                    initialdir= 'C:/Users/',
+                    filetypes= (('jpg files', '*.jpg'), ('all files', '*.*'))
+                    )
+img = cv2.imread(root.filename)
+img_gray = cv2.imread(root.filename, cv2.IMREAD_GRAYSCALE)
 
 # WINDOW_AUTOSIZE == jpg 파일 사이즈로 윈도우창 설정
 cv2.namedWindow('origin', cv2.WINDOW_AUTOSIZE)
