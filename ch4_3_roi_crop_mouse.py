@@ -28,7 +28,7 @@ def onMouse(event, x, y, flags, param):
             roi = img[y0:y0+h, x0:x0+w]
             cv2.imshow('cropped', roi)
             cv2.moveWindow('cropped', 0, 0)
-            cv2.imwrite('C:/Users/oing9/Documents/Crawling/img/cropped.jpg', roi)
+            cv2.imwrite('./img/cropped.jpg', roi)
             print('cropped.')
         elif w < 0 and h < 0:
             img_draw = img.copy()
@@ -38,11 +38,11 @@ def onMouse(event, x, y, flags, param):
             roi = img[y0+h:y0, x0+w:x0]
             cv2.imshow('cropped', roi)
             cv2.moveWindow('cropped', 0, 0)
-            cv2.imwrite('C:/Users/oing9/Documents/Crawling/img/cropped.jpg', roi)
+            cv2.imwrite('./img/cropped.jpg', roi)
         else:
             cv2.imshow('img', img)
             print('영역을 드래그 하세요.')
-img = cv2.imread('C:/Users/oing9/Documents/Crawling/img/sunset.jpg')
+img = cv2.imread('./img/sunset.jpg')
 cv2.imshow('img', img)
 cv2.setMouseCallback('img', onMouse)
 cv2.waitKey()
