@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread('C:/Users/oing9/Documents/Crawling/img/sunset.jpg')
+img = cv2.imread('./img/sunset.jpg')
 
 x = 320
 y = 150
